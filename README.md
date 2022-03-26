@@ -1,2 +1,2 @@
 # python_projects
-A repo for my python journey
+A repo for my python learning
