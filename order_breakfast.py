@@ -9,11 +9,13 @@ def valid_input(prompt, choice1, choice2):
     while True:
         response = input(prompt).lower()
         if choice1 in response:
-            return response
+            break
         elif choice2 in response:
-            return response
+            break            
         else:
             print_pause("Sorry, I don't understand this input.")
+    return response
+
 
 #Welcome Prompt
 def intro():
@@ -32,18 +34,16 @@ def get_order():
         print_pause("Pancakes it is!")
     
     print_pause("Your order will be ready shortly")
-    order_again()
         
 #Order Again
 def order_again():
-        another_choice = valid_input("Would you like to place another order? Please say 'yes' or 'no'\n", "yes", "no")
+    another_choice = valid_input("Would you like to place another order? Please say 'yes' or 'no'\n", "yes", "no")
 
-        if "no" in another_choice:
-            print_pause("OK, Goodbye")
-            # break
-        elif "yes" in another_choice:
-            print_pause("Very good, I'm happy to take another order.")  
-            get_order()  
+    if "no" in another_choice:
+        print_pause("OK, Goodbye")
+    elif "yes" in another_choice:
+        print_pause("Very good, I'm happy to take another order")  
+        get_order()  
 
 def order_breakfast():
     intro()
