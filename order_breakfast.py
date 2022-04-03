@@ -32,7 +32,7 @@ def get_order():
         print_pause("Waffles it is!")
     elif "pancakes" in choice:
         print_pause("Pancakes it is!")
-    
+   
     print_pause("Your order will be ready shortly")
         
 #Order Again
