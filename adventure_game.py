@@ -56,7 +56,8 @@ def house(antagonist, weapon):
 # Game's first choice
 def first_choice(antagonist, weapon):
     house(antagonist, weapon)
-    fight_choice = validate_input("Would you like to (1) fight or (2) run away?\n", ["1", "2"], first_choice)
+    fight_choice = validate_input("Would you like to (1) fight or (2) "
+                                  "run away\n", ["1", "2"], first_choice)
     if fight_choice == "1":
         fight(antagonist, weapon)
     elif fight_choice == "2":
@@ -93,7 +94,7 @@ def field(antagonist, weapon):
 
 # Game's second choice
 def cave(antagonist, weapon):
-    print_pause("You peer cautiously into the cave.", 3)
+    print_pause("You peer cautiously into the cave.", 2)
     if "Sword of Ogoroth" not in weapon:
         print_pause("It turns out to be only a very small cave.")
         print_pause("Your eye catches a glint of metal behind a rock.")
@@ -112,7 +113,8 @@ def cave(antagonist, weapon):
 
 # Protagonist makes a choice
 def protagonist_choices(antagonist, weapon):
-    response = validate_input("(Please enter 1 or 2)\n", ["1", "2"], protagonist_choices)
+    response = validate_input("(Please enter"
+                              " 1 or 2)\n", ["1", "2"], protagonist_choices)
 
     if response == "1":
         first_choice(antagonist, weapon)
