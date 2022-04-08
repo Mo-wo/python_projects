@@ -1,0 +1,6 @@
+alias goto="cd /root/alx/alx-low_level_programming/practice"
+alias restart="exec bash -l"
+alias python="python3"
+alias pymv="cd /root/python_projects"
+alias setup="cd /etc ; vi bash.bashrc"
+alias shared="cd /media/sf_python_projects"
